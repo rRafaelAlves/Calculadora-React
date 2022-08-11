@@ -1,11 +1,11 @@
 import React from "react";
-import './calculator.css'
-import Button from "../Components/Button";
+import Buttons from "../Components/Buttons";
+import { CalculadoraContainer } from "./styles";
 
 export default function Calculator(){
     return(
-        <div className="container">
-            <Button></Button>
-        </div>
+        <CalculadoraContainer>
+        <Buttons />
+        </CalculadoraContainer>
     )
 }

@@ -1,14 +1,15 @@
 import React from "react";
 import Main from './Main'
 import './App.css'
+import {Body} from './AppStyles'
 
 
 export default function App() {
   return (
-    <div >
+    <Body>
       <h1>Calculadora</h1>
       <Main></Main>
-    </div>
+    </Body>
   );
 }
 
