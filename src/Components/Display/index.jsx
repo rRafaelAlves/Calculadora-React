@@ -1,10 +1,9 @@
 import React from "react";
-import {DisplayContent} from './styles.js'
+import { DisplayContent } from "./styles";
 
-export default function Display(){
 
+export default function Displayprops(props){
     return(
-        <DisplayContent></DisplayContent>
+        <DisplayContent >{props.value}</DisplayContent>
     )
-
-}
+} 
