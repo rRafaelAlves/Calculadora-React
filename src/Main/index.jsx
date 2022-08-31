@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import Display from "../Components/Display";
 import Botao from "../Components/Button";
 import { Corpo } from "./styles";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -27,6 +29,9 @@ export default function Calculator(){
 
     const setarOperacao = (operacao)=>{
 
+
+        const errorDisplay = () => toast.error('Cálculo Inválido, tente novamente.')
+
         if(state.current === 0){
             
             setState(prevState =>{
@@ -43,7 +48,9 @@ export default function Calculator(){
 
                 values[0] = eval(`${values[0]}  ${currentOperacao}  ${values[1]}`)
                  if (isNaN(values[0]) || !isFinite(values[0])) {
-                     setState({ current: 0, operation })
+                     errorDisplay()
+
+                     setState({ current: 0, operacao })
                      limparDisplay()
         
                     return
@@ -120,6 +127,8 @@ export default function Calculator(){
             <Botao click={adicionarDigito} ClassName={'botao__duplo'} Value={'0'}></Botao>
             <Botao click={adicionarDigito} Value={'.'}></Botao>
             <Botao click={setarOperacao} Value={'='}></Botao>
+
+            <ToastContainer />
 
         </Corpo>
     )
