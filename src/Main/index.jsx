@@ -42,6 +42,13 @@ export default function Calculator(){
             try{
 
                 values[0] = eval(`${values[0]}  ${currentOperacao}  ${values[1]}`)
+                 if (isNaN(values[0]) || !isFinite(values[0])) {
+                     setState({ current: 0, operation })
+                     limparDisplay()
+        
+                    return
+
+}
 
             }catch(err){
                 values[0] = state.values[0]
