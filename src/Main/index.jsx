@@ -70,7 +70,7 @@ export default function Calculator(){
     }
 
     const adicionarDigito = (digito)=>{
-      
+      console.log(digito)
        
        
         const limparDisplay = state.displayValue === '0' || state.limparDisplay === true
