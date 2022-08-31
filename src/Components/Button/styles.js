@@ -4,8 +4,7 @@ export const Botao = styled.button`
 font-size: 1.4rem;
 background-color: #f0f0f0;
 padding: 6px;
-margin: 1px;
-border-radius: 2px;
+color: #222;
 outline: none;
 border: none;
     &:hover{
